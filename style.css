@@ -74,10 +74,12 @@
 }
 
 .modal__inner {
-  width: 500px;
   position: absolute;
-  top: 0;
-  left: 16%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   border-radius: 6px;
   z-index: 7;
 }
