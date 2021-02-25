@@ -3,6 +3,7 @@ new Vue({
   data: {
     displayImage: 0,
     style: '',
+    isShow: false,
     images: [
       './img/autumn-219972_1280.jpg',
       './img/clouds-49520_1280.jpg',
@@ -30,6 +31,13 @@ new Vue({
     switchImage(index) {
       this.displayImage = index;
       this.style = 'slide-right';
+    },
+    showModal(index) {
+      this.isShow = true;
+      this.displayImage = index;
+    },
+    hiddenModal() {
+      this.isShow = false;
     },
   },
 });
