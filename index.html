@@ -21,14 +21,42 @@
               v-for="(image, index) in images"
               :key="image"
               v-show="index === displayImage"
+              @click="showModal(index)"
             >
               <img class="slide-show__img" :src="image" alt="" />
             </div>
           </transition-group>
         </div>
 
+        <div v-show="isShow" class="slide-show__modal modal">
+          <div
+            class="modal__inner"
+            v-for="(image, index) in images"
+            :key="image"
+            v-show="index === displayImage"
+          >
+            <img class="modal__img" :src="image" alt="" />
+          </div>
+          <div class="modal__bg" @click="hiddenModal"></div>
+        </div>
+
         <div class="slide-show__btn--right">
           <button @click="next">＞</button>
+        </div>
+      </div>
+
+      <div class="slide-show__footer">
+        <div
+          v-for="(image, index) in images"
+          :key="image"
+          @click="switchImage(index)"
+        >
+          <img
+            class="slide-show__thumbnail"
+            :class="{'thumbnail_active': index === displayImage}"
+            :src="image"
+            alt=""
+          />
         </div>
       </div>
     </div>
