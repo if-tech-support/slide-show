@@ -55,7 +55,7 @@
   height: 250px;
 }
 
-/* .slide-right-leave-active,
+.slide-right-leave-active,
 .slide-right-enter-active,
 .slide-left-leave-active,
 .slide-left-enter-active {
@@ -70,4 +70,4 @@
 .slide-right-leave-active,
 .slide-left-enter {
   transform: translateX(-100%);
-} */
+}
