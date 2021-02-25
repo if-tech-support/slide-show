@@ -7,6 +7,7 @@ new Vue({
       './img/autumn-219972_1280.jpg',
       './img/clouds-49520_1280.jpg',
       './img/forest-1072828_1280.jpg',
+      './img/fire-123784_1920.jpg',
     ],
   },
   methods: {
@@ -25,6 +26,10 @@ new Vue({
         this.displayImage--;
       }
       this.style = 'slide-left';
+    },
+    switchImage(index) {
+      this.displayImage = index;
+      this.style = 'slide-right';
     },
   },
 });

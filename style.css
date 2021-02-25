@@ -71,3 +71,25 @@
 .slide-left-enter {
   transform: translateX(-100%);
 }
+
+.slide-show__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slide-show__thumbnail {
+  height: 50px;
+  width: 80px;
+  margin-right: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.slide-show__thumbnail:hover {
+  opacity: 1;
+}
+
+.thumbnail_active {
+  opacity: 1;
+}

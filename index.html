@@ -31,6 +31,21 @@
           <button @click="next">＞</button>
         </div>
       </div>
+
+      <div class="slide-show__footer">
+        <div
+          v-for="(image, index) in images"
+          :key="image"
+          @click="switchImage(index)"
+        >
+          <img
+            class="slide-show__thumbnail"
+            :class="{'thumbnail_active': index === displayImage}"
+            :src="image"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
 
     <script src="app.js"></script>
